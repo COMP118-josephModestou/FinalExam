@@ -67,7 +67,7 @@ double sumNegative(double **matrix, const int x, const int y)
 }
 
 // showData implementation
-void showData(double **matrix, int x, int y)
+void showData(double **matrix, const int x, const int y)
 {
     for(int i = 0; i < x; i++)
     {
