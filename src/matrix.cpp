@@ -16,13 +16,31 @@ using std::cout, std::cin, std::endl;
 // enterData implementation
 void enterData(double **matrix, const int x, const int y)
 {
+    // is input valid flag
+    bool isValid = false;
+
     for(int i = 0; i < x; i++)
     {
         cout << "<==== Entering in group " << i << " ====>" << endl;
         for(int j = 0; j < y; j++)
         {
-            cout << "Enter value " << j << ": ";
-            cin >> matrix[i][j];
+            isValid = false;
+            do
+            {
+                cout << "Enter value " << j << ": ";
+                cin >> matrix[i][j];
+
+                // Check value range
+                if(matrix[i][j] < -1.5 || matrix[i][j] > 3.5)
+                {
+                    cout << "Please enter a value within the range [-1.5, 3.5]" << endl;
+                }
+                else
+                {
+                    isValid = true;
+                }
+            }
+            while(!isValid);
         }
     }
 }
