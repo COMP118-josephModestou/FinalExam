@@ -1,0 +1,5 @@
+# Cmake build output
+build/*
+
+# Vscode
+.vscode/*
