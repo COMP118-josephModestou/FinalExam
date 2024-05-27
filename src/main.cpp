@@ -82,6 +82,7 @@ int main(int argc, char *argv[])
             break;
         case 4:
             exit = true;
+            break;
         default:
             cout << "Invalid choice." << endl;
         }

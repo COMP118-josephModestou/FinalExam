@@ -13,14 +13,24 @@
 
 using std::cout, std::cin, std::endl;
 
-//enterData implementation
+// enterData implementation
 void enterData(double **matrix, const int x, const int y)
-{ }
+{
+    for(int i = 0; i < x; i++)
+    {
+        cout << "<==== Entering in group " << i << " ====>" << endl;
+        for(int j = 0; j < y; j++)
+        {
+            cout << "Enter value " << j << ": ";
+            cin >> matrix[i][j];
+        }
+    }
+}
 
 // sumNegative implementation
 double sumNegative(double **matrix, const int x, const int y)
 { return 0; }
 
 // showData implementation
-void showData(double **matrix, const int x, const int y)
+void showData(double **matrix, int x, int y)
 { }
