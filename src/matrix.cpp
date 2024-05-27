@@ -29,7 +29,24 @@ void enterData(double **matrix, const int x, const int y)
 
 // sumNegative implementation
 double sumNegative(double **matrix, const int x, const int y)
-{ return 0; }
+{
+    double value;
+    double sum = 0;
+
+    for(int i = 0; i < x; i++)
+    {
+        for(int j = 0; j < y; j++)
+        {
+            value = matrix[i][j];
+            if(value < 0)
+            {
+                sum += value;
+            }
+        }
+    }
+
+    return sum;
+}
 
 // showData implementation
 void showData(double **matrix, int x, int y)
