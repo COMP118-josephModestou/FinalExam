@@ -8,6 +8,7 @@
 */
 
 #include <iostream>
+#include <cassert>
 
 #include "matrix.hpp"
 
@@ -16,6 +17,10 @@ using std::cout, std::cin, std::endl;
 // enterData implementation
 void enterData(double **matrix, const int x, const int y)
 {
+    // Check provided dimensions
+    assert(x > 0);
+    assert(y > 0);
+
     // is input valid flag
     bool isValid = false;
 
@@ -48,6 +53,10 @@ void enterData(double **matrix, const int x, const int y)
 // sumNegative implementation
 double sumNegative(double **matrix, const int x, const int y)
 {
+    // Check provided dimensions
+    assert(x > 0);
+    assert(y > 0);
+
     double value;
     double sum = 0;
 
@@ -69,6 +78,10 @@ double sumNegative(double **matrix, const int x, const int y)
 // showData implementation
 void showData(double **matrix, const int x, const int y)
 {
+    // Check provided dimensions
+    assert(x > 0);
+    assert(y > 0);
+
     for(int i = 0; i < x; i++)
     {
         for(int j = 0; j < y; j++)
