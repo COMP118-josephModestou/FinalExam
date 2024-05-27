@@ -32,3 +32,13 @@ double sumNegative(double **matrix, const int x, const int y);
  * @param y The y component of the matrix
 */
 void showData(double **matrix, const int x, const int y);
+
+/**
+ * <code>countValue</code> returns the number of times the given value appears in the matrix
+ * @param matrix The matrix to search
+ * @param x The x component of the matrix
+ * @param y The y component of the matrix
+ * @param value The search value to look for
+ * @return The number of times the value appears
+*/
+int countValue(double **matrix, const int x, const int y, double value);

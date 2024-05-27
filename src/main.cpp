@@ -45,6 +45,8 @@ int main(int argc, char *argv[])
     double sum;
     // Holds the current user option
     int option;
+    // Hold the result from countValue
+    int count;
 
     // Exit flag
     bool exit = false;
@@ -81,6 +83,10 @@ int main(int argc, char *argv[])
             showData(matrix, maxX, maxY);
             break;
         case 4:
+            count = countValue(matrix, maxX, maxY, 2.5);
+            cout << "The value 2.5 is found " << count << " times." << endl;
+            break;
+        case 5:
             exit = true;
             break;
         default:
@@ -100,7 +106,8 @@ void printMenu(void)
     cout << "1) Enter data in matrix (range -1.5 to 3.5)" << endl;
     cout << "2) Sum of all negative numbers" << endl;
     cout << "3) Show data in matrix" << endl;
-    cout << "4) Exit" << endl;
+    cout << "4) Count 2.5" << endl;
+    cout << "5) Exit" << endl;
     cout << "Please enter choice: ";
 }
 

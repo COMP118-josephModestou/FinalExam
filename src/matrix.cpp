@@ -78,3 +78,22 @@ void showData(double **matrix, const int x, const int y)
         cout << endl;
     }
 }
+
+// countValue implementation
+int countValue(double **matrix, const int x, const int y, double value)
+{
+    int count = 0;
+
+    for(int i = 0; i < x; i++)
+    {
+        for(int j = 0; j < y; j++)
+        {   
+            if(matrix[i][j] == value)
+            {
+                count++;
+            }
+        }
+    }
+
+    return count;
+}
